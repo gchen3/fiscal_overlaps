@@ -1,0 +1,142 @@
+---
+title: "Debt Map Comparison"
+format:
+  html:
+    toc: false
+    embed-resources: false
+    page-layout: full
+    theme: cosmo
+execute:
+  echo: false
+---
+
+```{=html}
+<style>
+  .lead-note {
+    color: #516067;
+    font-size: 0.95rem;
+    margin: -0.25rem 0 1.25rem;
+  }
+  .comparison {
+    margin: 0 0 1.75rem;
+  }
+  .comparison h2 {
+    font-size: 1.18rem;
+    margin: 0 0 0.55rem;
+  }
+  .map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .map-panel {
+    border: 1px solid #d8d5cc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .map-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #e2dfd6;
+    background: #fbfaf7;
+  }
+  .map-bar h3 {
+    margin: 0;
+    font-size: 0.98rem;
+  }
+  .map-bar a {
+    white-space: nowrap;
+    font-size: 0.86rem;
+  }
+  .map-note {
+    min-height: 3.6rem;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid #e2dfd6;
+    color: #516067;
+    font-size: 0.88rem;
+    line-height: 1.35;
+  }
+  .map-note strong {
+    color: #1d2528;
+  }
+  iframe {
+    display: block;
+    width: 100%;
+    height: 720px;
+    border: 0;
+    background: #eef3f2;
+  }
+  @media (max-width: 1050px) {
+    .map-grid {
+      grid-template-columns: 1fr;
+    }
+    iframe {
+      height: 680px;
+    }
+  }
+  @media (max-width: 640px) {
+    .map-bar {
+      display: block;
+    }
+    .map-bar a {
+      display: inline-block;
+      margin-top: 0.35rem;
+    }
+    iframe {
+      height: 560px;
+    }
+  }
+</style>
+
+<p class="lead-note">
+Reason data maps are compared with state source maps. Use the links to open any map at full size.
+</p>
+
+<section class="comparison">
+  <h2>Massachusetts: Reason Data vs DLS Data</h2>
+  <div class="map-grid">
+    <article class="map-panel">
+      <div class="map-bar">
+        <h3>MA Reason Data</h3>
+        <a href="ma_aggregate_debt_per_capita_map.html" target="_blank" rel="noopener">Open full map</a>
+      </div>
+      <div class="map-note"><strong>Measure:</strong> state + county + municipal aggregate debt per capita. Missing values are shown in gray when required active layers are missing.</div>
+      <iframe src="ma_aggregate_debt_per_capita_map.html" title="Massachusetts Reason data aggregate debt per capita map"></iframe>
+    </article>
+    <article class="map-panel">
+      <div class="map-bar">
+        <h3>MA DLS Data</h3>
+        <a href="ma_dls_2023_long_term_debt_per_capita_map.html" target="_blank" rel="noopener">Open full map</a>
+      </div>
+      <div class="map-note"><strong>Measure:</strong> municipal long-term outstanding debt per capita only. This does not include state or county debt.</div>
+      <iframe src="ma_dls_2023_long_term_debt_per_capita_map.html" title="Massachusetts DLS long-term debt per capita map"></iframe>
+    </article>
+  </div>
+</section>
+
+<section class="comparison">
+  <h2>New York: Reason Data vs OSC Data</h2>
+  <div class="map-grid">
+    <article class="map-panel">
+      <div class="map-bar">
+        <h3>NY Reason Data</h3>
+        <a href="ny_aggregate_debt_per_capita_map.html" target="_blank" rel="noopener">Open full map</a>
+      </div>
+      <div class="map-note"><strong>Measure:</strong> state + county + municipal aggregate debt per capita. Missing values are shown in gray when required active layers are missing.</div>
+      <iframe src="ny_aggregate_debt_per_capita_map.html" title="New York Reason data aggregate debt per capita map"></iframe>
+    </article>
+    <article class="map-panel">
+      <div class="map-bar">
+        <h3>NY OSC Data</h3>
+        <a href="ny_osc_2023_municipal_debt_map.html" target="_blank" rel="noopener">Open full map</a>
+      </div>
+      <div class="map-note"><strong>Measure:</strong> municipal outstanding debt total only. This is not per capita and does not include state or county debt.</div>
+      <iframe src="ny_osc_2023_municipal_debt_map.html" title="New York OSC municipal debt map"></iframe>
+    </article>
+  </div>
+</section>
+```

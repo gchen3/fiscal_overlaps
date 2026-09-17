@@ -1,0 +1,15 @@
+# Raw/source data and local build inputs
+map_inputs/
+MA_DLS_data/
+NYS_OSC_data/
+municipality_county_map_data_streamlined.csv
+county_state_map_data_streamlined.csv
+*.py
+*.csv
+
+# Quarto support files
+debt_map_comparison_files/
+
+# Local/system files
+.DS_Store
+Thumbs.db

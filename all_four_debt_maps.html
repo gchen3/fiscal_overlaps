@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Debt Map Comparison</title>
+<style>
+  :root {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1d2528;
+    background: #f4f1ea;
+  }
+  body {
+    margin: 0;
+    padding: 22px;
+  }
+  header {
+    max-width: 1480px;
+    margin: 0 auto 16px;
+  }
+  h1 {
+    margin: 0 0 6px;
+    font-size: 28px;
+    line-height: 1.15;
+    letter-spacing: 0;
+  }
+  p {
+    margin: 0;
+    color: #516067;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .comparison {
+    max-width: 1480px;
+    margin: 0 auto 22px;
+  }
+  .comparison-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+  section {
+    background: #ffffff;
+    border: 1px solid #d8d5cc;
+    border-radius: 8px;
+    overflow: hidden;
+    min-width: 0;
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2dfd6;
+    background: #fbfaf7;
+  }
+  h2 {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+  a {
+    color: #075a60;
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .note {
+    padding: 9px 12px;
+    border-bottom: 1px solid #e2dfd6;
+    color: #516067;
+    font-size: 13px;
+    line-height: 1.35;
+    min-height: 52px;
+  }
+  .note strong {
+    color: #1d2528;
+  }
+  iframe {
+    display: block;
+    width: 100%;
+    height: 720px;
+    border: 0;
+    background: #eef3f2;
+  }
+  @media (max-width: 1050px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    iframe {
+      height: 680px;
+    }
+  }
+  @media (max-width: 640px) {
+    body {
+      padding: 12px;
+    }
+    iframe {
+      height: 560px;
+    }
+    .bar {
+      display: block;
+    }
+    a {
+      display: inline-block;
+      margin-top: 6px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Debt Map Comparison</h1>
+  <p>Reason data maps are compared with state source maps. Use the links to open any map at full size.</p>
+</header>
+<main>
+<div class="comparison">
+  <h2 class="comparison-title">Massachusetts: Reason Data vs DLS Data</h2>
+  <div class="grid">
+  <section>
+    <div class="bar">
+      <h2>MA Reason Data</h2>
+      <a href="ma_aggregate_debt_per_capita_map.html" target="_blank" rel="noopener">Open full map</a>
+    </div>
+    <div class="note"><strong>Measure:</strong> state + county + municipal aggregate debt per capita. Missing values are shown in gray when required active layers are missing.</div>
+    <iframe src="ma_aggregate_debt_per_capita_map.html" title="Massachusetts aggregate debt per capita map"></iframe>
+  </section>
+  <section>
+    <div class="bar">
+      <h2>MA DLS Data</h2>
+      <a href="ma_dls_2023_long_term_debt_per_capita_map.html" target="_blank" rel="noopener">Open full map</a>
+    </div>
+    <div class="note"><strong>Measure:</strong> municipal long-term outstanding debt per capita only. This does not include state or county debt.</div>
+    <iframe src="ma_dls_2023_long_term_debt_per_capita_map.html" title="Massachusetts DLS long-term debt per capita map"></iframe>
+  </section>
+  </div>
+</div>
+
+<div class="comparison">
+  <h2 class="comparison-title">New York: Reason Data vs OSC Data</h2>
+  <div class="grid">
+  <section>
+    <div class="bar">
+      <h2>NY Reason Data</h2>
+      <a href="ny_aggregate_debt_per_capita_map.html" target="_blank" rel="noopener">Open full map</a>
+    </div>
+    <div class="note"><strong>Measure:</strong> state + county + municipal aggregate debt per capita. Missing values are shown in gray when required active layers are missing.</div>
+    <iframe src="ny_aggregate_debt_per_capita_map.html" title="New York aggregate debt per capita map"></iframe>
+  </section>
+  <section>
+    <div class="bar">
+      <h2>NY OSC Data</h2>
+      <a href="ny_osc_2023_municipal_debt_map.html" target="_blank" rel="noopener">Open full map</a>
+    </div>
+    <div class="note"><strong>Measure:</strong> municipal outstanding debt total only. This is not per capita and does not include state or county debt.</div>
+    <iframe src="ny_osc_2023_municipal_debt_map.html" title="New York OSC municipal debt map"></iframe>
+  </section>
+  </div>
+</div>
+</main>
+</body>
+</html>
